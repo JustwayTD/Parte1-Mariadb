@@ -46,13 +46,13 @@ def editaMoh(wordto,newmean):
 def eliminaMoh (word_todel):
     """Deletes certain word from our database"""
     del_wor= slangs.query.filter_by(word = word_todel).first
-    q.session.delete(del_wor)
-    q.session.commit()
+    c.session.delete(del_wor)
+    c.session.commit()
 
 def urbanDic():
     """Shows all elements from my database slangs"""
-   words = slangs.query.all()
-   return words
+    words = slangs.query.all()
+    return words
 def whatIsLove(babyDont):
     """Shows a Description of a certain word"""
     babyDont.strip()
