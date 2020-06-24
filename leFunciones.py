@@ -5,8 +5,8 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Column, String, Integer, Date
 
 engine = create_engine('mysql+mysqlconnector://'':password @localhost[:3306]/<slangs>')
-session = sessionmaker(bind=engine)
-
+Session = sessionmaker(bind=engine)
+session = Session()
 Base = declarative_base()
 class slangs(Base):
     __tablename__:"slangs"
